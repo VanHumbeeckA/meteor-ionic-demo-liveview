@@ -1,0 +1,51 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>LiveView</title>
+    <link rel="stylesheet" href="client/styles/pure-min.css">
+    <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
+</head>
+
+<body   ng-app="LiveView"
+        ng-controller="MainController as ctrl">
+    <div class="pure-g">
+            <div class="pure-u-1-5">
+                <table class="pure-table pure-table-horizontal mar10">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th >users (nodes) - {{ctrl.nodes.length}}</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr ng-repeat="node in ctrl.nodes">
+                        <td>{{$index}}</td>
+                        <td>{{node.name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pure-u-1-5">
+                <table class="pure-table pure-table-horizontal mar10">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th colspan="2">chats (links) - {{ctrl.links.length}}</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr ng-repeat="link in ctrl.links">
+                        <td>{{$index}}</td>
+                        <td>{{link.source.name}}</td>
+                        <td>{{link.target.name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pure-u-3-5 render-div">
+                <svg class="render"></svg>
+            </div>
+    </div>
+</body>

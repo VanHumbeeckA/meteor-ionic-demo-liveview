@@ -1,0 +1,20 @@
+
+.node {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: .6;
+}
+
+.mar10 {
+    margin: 10px;
+}
+
+.node-name {
+    font-weight: bold;
+    cursor: default;
+    letter-spacing: normal;
+}
